@@ -1,0 +1,90 @@
+<% layout('/layouts/boilerPlate') %>
+<div class="row">
+  <h1 class="text-center">New Campground</h1>
+  <div class="col-6 offset-3">
+    <form
+      class="needs-validation"
+      action="/campgrounds"
+      method="post"
+      novalidate
+      enctype="multipart/form-data"
+    >
+      <div class="mb-3">
+        <label class="form-label" for="title">Title</label>
+        <input
+          class="form-control"
+          type="text"
+          name="campground[title]"
+          id="title"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Location</label>
+        <input
+          class="form-control"
+          type="text"
+          name="campground[location]"
+          id="location"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="input-group mb-3">
+        <div class="form-file custom-file">
+          <input
+            type="file"
+            class="form-file-input"
+            id="inputGroupFile01"
+            aria-describedby="inputGroupFileAddon01"
+            name="image"
+            multiple
+          />
+          <label class="form-file-label" for="inputGroupFile01">
+            <span class="form-file-text custom-file-label">Choose file...</span>
+            <span class="form-file-button">Browse</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- <div class="mb-3">
+        <label class="form-label" for="Image">Image</label>
+        <input
+          class="form-control"
+          type="file"
+          name="image"
+          id="image"
+          required
+          multiple
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div> -->
+      <div class="mb-3">
+        <label class="form-label" for="location">Description</label>
+        <input
+          class="form-control"
+          type="text"
+          name="campground[description]"
+          id="description"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <label class="form-label" for="price">Price</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text">₹</span>
+        <input
+          type="text"
+          class="form-control"
+          name="campground[price]"
+          id="price"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+        <span class="input-group-text">.00</span>
+      </div>
+      <button class="btn btn-primary">Add Campground</button>
+    </form>
+  </div>
+</div>
